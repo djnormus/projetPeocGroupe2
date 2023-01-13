@@ -1,0 +1,152 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 2196704300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeTest()"
+            }
+          }
+        ],
+        "line": 5,
+        "name": "Test US01- Valider que le client ne puisse pas créer un compte avec un nom, prénom, email et un mot de passe NON CONFORME au Regex (minim 7 caractères et contenir minim une majuscule, une  minuscule, un chiffre et un caractère spécial)",
+        "description": "",
+        "id": "us01--création-de-compte;test-us01--valider-que-le-client-ne-puisse-pas-créer-un-compte-avec-un-nom--prénom--email-et-un-mot-de-passe-non-conforme-au-regex-(minim-7-caractères-et-contenir-minim-une-majuscule--une--minuscule--un-chiffre-et-un-caractère-spécial)",
+        "after": [
+          {
+            "result": {
+              "duration": 126200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2877830900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "j ouvre l application",
+            "match": {
+              "location": "CreateAccountConformPswSteps.jOuvreLApplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 812306600,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "je clique sur My Account",
+            "match": {
+              "location": "CreateAccountConformPswSteps.jeCliqueSurMyAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 65292400,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "je saisie le email \u0027poecgroupe27@endtest.io\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027poecgroupe27@endtest.io\u0027",
+                  "offset": 19
+                }
+              ],
+              "location": "CreateAccountConformPswSteps.jeSaisieLeEmailStandard_user(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 138310000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "je saisie un mot de passe Non Conforme au Regex \u0027poecgroupe\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027poecgroupe\u0027",
+                  "offset": 48
+                }
+              ],
+              "location": "CreateAccountNonConformPswSteps.jeSaisieUnMotDePasseNonConformeAuRegexPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 36924200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "je clique sur Register",
+            "match": {
+              "location": "CreateAccountConformPswSteps.jeCliqueSurRegister()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 63685300,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "le compte client n est pas créé",
+            "match": {
+              "location": "CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@REQ_POE2-5"
+          },
+          {
+            "name": "@TEST_POE2-13"
+          },
+          {
+            "name": "@TESTSET_POE2-49"
+          },
+          {
+            "name": "@endproject-Joumen"
+          }
+        ]
+      }
+    ],
+    "name": "US01- Création de compte",
+    "description": "",
+    "id": "us01--création-de-compte",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/createAccountNonConformPsw.feature",
+    "tags": [
+      {
+        "name": "@REQ_POE2-5",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
