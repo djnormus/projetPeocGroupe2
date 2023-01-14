@@ -6,6 +6,7 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="projetPeocGroupe2" />
         <module name="projet-poec-groupe2" />
       </profile>
     </annotationProcessing>
