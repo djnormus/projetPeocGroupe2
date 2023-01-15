@@ -46,6 +46,9 @@ public class LoginRegisterPageLocators {
     @FindBy(name = "register")
     public WebElement registerBtn;
 
+    // CHECKBOX
+    @FindBy(id = "rememberme")
+    public WebElement checkboxRemeber;
 
 
 

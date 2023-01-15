@@ -89,7 +89,8 @@ formatter.match({
   "location": "CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé()"
 });
 formatter.result({
-  "status": "passed"
+  "error_message": "java.lang.AssertionError: Le bouton est cliquable\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertFalse(Assert.java:64)\r\n\tat step_definition.CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé(CreateAccountNonConformPswSteps.java:23)\r\n\tat ✽.le compte client n est pas créé(file:src/test/resources/features/createAccountNonConformPsw.feature:11)\r\n",
+  "status": "failed"
 });
 formatter.after({
   "status": "passed"

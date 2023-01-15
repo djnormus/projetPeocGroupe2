@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 2196704300,
+              "duration": 3272347900,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 126200,
+              "duration": 93400,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2877830900,
+              "duration": 2763695800,
               "status": "passed"
             },
             "line": 6,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 812306600,
+              "duration": 682259600,
               "status": "passed"
             },
             "line": 7,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 65292400,
+              "duration": 138673900,
               "status": "passed"
             },
             "line": 8,
@@ -76,7 +76,7 @@
           },
           {
             "result": {
-              "duration": 138310000,
+              "duration": 87751900,
               "status": "passed"
             },
             "line": 9,
@@ -94,7 +94,7 @@
           },
           {
             "result": {
-              "duration": 36924200,
+              "duration": 552692400,
               "status": "passed"
             },
             "line": 10,
@@ -106,8 +106,9 @@
           },
           {
             "result": {
-              "duration": 63685300,
-              "status": "passed"
+              "error_message": "java.lang.AssertionError: Le bouton est cliquable\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertFalse(Assert.java:64)\r\n\tat step_definition.CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé(CreateAccountNonConformPswSteps.java:23)\r\n\tat ✽.le compte client n est pas créé(file:src/test/resources/features/createAccountNonConformPsw.feature:11)\r\n",
+              "duration": 65435300,
+              "status": "failed"
             },
             "line": 11,
             "name": "le compte client n est pas créé",
