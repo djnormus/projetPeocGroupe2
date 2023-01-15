@@ -27,33 +27,31 @@ public class CreateAccountConformPswSteps {
     @Given("j ouvre l application")
     public void jOuvreLApplication() {
         driver.get(prop.getProperty("url"));
-        System.out.println("from Given");
     }
 
     @When("je clique sur My Account")
     public void jeCliqueSurMyAccount() {
-        //driver.findElement(By.xpath("//a[normalize-space()='My Account']")).click();
         homeLoc.myAccountButton.click();
     }
 
 
-    @And("je saisie le email {string}")
+    @And("je saisis mon email dans le pavé register {string}")
     public void jeSaisieLeEmailStandard_user(String email) {
         loginLoc.registerEmailInput.sendKeys(email);
     }
 
-    @And("je saisie un password Conforme au Regex {string}")
+    @And("je saisis un password conforme au Regex dans le pavé register {string}")
     public void jeSaisieUnPasswordConformeAuRegexPoecgroupe(String conformPassword) {
         loginLoc.registerPasswordInput.sendKeys(conformPassword);
     }
 
-    @And("je clique sur Register")
+    @And("je clique sur le bouton register")
     public void jeCliqueSurRegister() {
         loginLoc.registerBtn.click();
     }
 
     @Then("le compte client est créé")
-    public void leCompteClientEstCréé() throws IOException {
+    public void leCompteClientEstCree() throws IOException {
         String actualTxt = myAccountLoc.welcomeMessage.getText();
         //String expectedTxt = "Hello";
 

@@ -11,14 +11,14 @@ public class CreateAccountNonConformPswSteps {
 
     LoginRegisterPageLocators loginLoc = new LoginRegisterPageLocators(driver);
 
-    @And("je saisie un mot de passe Non Conforme au Regex {string}")
+    @And("je saisis un mot de passe non conforme au Regex dans le pavé register {string}")
     public void jeSaisieUnMotDePasseNonConformeAuRegexPoecgroupe(String NonConformPassword) {
         loginLoc.registerPasswordInput.sendKeys(NonConformPassword);
 
     }
 
     @Then("le compte client n est pas créé")
-    public void leCompteClientNEstPasCréé() {
+    public void leCompteClientNEstPasCree() {
 
         Assert.assertFalse("Le bouton est cliquable", loginLoc.registerBtn.isEnabled() );
 

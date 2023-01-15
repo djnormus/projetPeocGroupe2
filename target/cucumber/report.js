@@ -52,7 +52,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "je saisie le email \u0027poecgroupe27@endtest.io\u0027",
+  "name": "je saisis mon email dans le pavé register \u0027poecgroupe27@endtest.io\u0027",
   "keyword": "And "
 });
 formatter.match({
@@ -62,7 +62,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "je saisie un mot de passe Non Conforme au Regex \u0027poecgroupe\u0027",
+  "name": "je saisis un mot de passe Non Conforme au Regex \u0027poecgroupe\u0027",
   "keyword": "And "
 });
 formatter.match({
@@ -72,7 +72,7 @@ formatter.result({
   "status": "passed"
 });
 formatter.step({
-  "name": "je clique sur Register",
+  "name": "je clique sur le bouton register",
   "keyword": "And "
 });
 formatter.match({
@@ -89,7 +89,7 @@ formatter.match({
   "location": "CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé()"
 });
 formatter.result({
-  "error_message": "java.lang.AssertionError: Le bouton est cliquable\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertFalse(Assert.java:64)\r\n\tat step_definition.CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé(CreateAccountNonConformPswSteps.java:23)\r\n\tat ✽.le compte client n est pas créé(file:src/test/resources/features/createAccountNonConformPsw.feature:11)\r\n",
+  "error_message": "java.lang.AssertionError: Le bouton est cliquable\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertFalse(Assert.java:64)\n\tat step_definition.CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé(CreateAccountNonConformPswSteps.java:23)\n\tat ✽.le compte client n est pas créé(file:src/test/resources/features/createAccountNonConformPsw.feature:11)\n",
   "status": "failed"
 });
 formatter.after({

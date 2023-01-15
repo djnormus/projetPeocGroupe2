@@ -29,6 +29,10 @@ public class LoginRegisterPageLocators {
     @FindBy(name = "login")
     public WebElement loginBtn;
 
+    // LOGIN ERROR MESSAGE
+    @FindBy(xpath = "//li[contains(text(),': the password you entered for the username')]")
+    public WebElement loginErrorMsg;
+
     // LINK LOST YOUR PASSWORD
     @FindBy(linkText ="Lost your password?" )
     public WebElement linkLostPassword;
@@ -48,7 +52,7 @@ public class LoginRegisterPageLocators {
 
     // CHECKBOX
     @FindBy(id = "rememberme")
-    public WebElement checkboxRemeber;
+    public WebElement checkboxRemember;
 
 
 

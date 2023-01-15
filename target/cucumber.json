@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 3272347900,
+              "duration": 4390709548,
               "status": "passed"
             },
             "match": {
@@ -21,7 +21,7 @@
         "after": [
           {
             "result": {
-              "duration": 93400,
+              "duration": 324013,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 2763695800,
+              "duration": 6776115109,
               "status": "passed"
             },
             "line": 6,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 682259600,
+              "duration": 167423278,
               "status": "passed"
             },
             "line": 7,
@@ -58,16 +58,16 @@
           },
           {
             "result": {
-              "duration": 138673900,
+              "duration": 7135807170,
               "status": "passed"
             },
             "line": 8,
-            "name": "je saisie le email \u0027poecgroupe27@endtest.io\u0027",
+            "name": "je saisis mon email dans le pavé register \u0027poecgroupe27@endtest.io\u0027",
             "match": {
               "arguments": [
                 {
                   "val": "\u0027poecgroupe27@endtest.io\u0027",
-                  "offset": 19
+                  "offset": 42
                 }
               ],
               "location": "CreateAccountConformPswSteps.jeSaisieLeEmailStandard_user(String)"
@@ -76,11 +76,11 @@
           },
           {
             "result": {
-              "duration": 87751900,
+              "duration": 278549761,
               "status": "passed"
             },
             "line": 9,
-            "name": "je saisie un mot de passe Non Conforme au Regex \u0027poecgroupe\u0027",
+            "name": "je saisis un mot de passe Non Conforme au Regex \u0027poecgroupe\u0027",
             "match": {
               "arguments": [
                 {
@@ -94,11 +94,11 @@
           },
           {
             "result": {
-              "duration": 552692400,
+              "duration": 2437186976,
               "status": "passed"
             },
             "line": 10,
-            "name": "je clique sur Register",
+            "name": "je clique sur le bouton register",
             "match": {
               "location": "CreateAccountConformPswSteps.jeCliqueSurRegister()"
             },
@@ -106,8 +106,8 @@
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: Le bouton est cliquable\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertFalse(Assert.java:64)\r\n\tat step_definition.CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé(CreateAccountNonConformPswSteps.java:23)\r\n\tat ✽.le compte client n est pas créé(file:src/test/resources/features/createAccountNonConformPsw.feature:11)\r\n",
-              "duration": 65435300,
+              "error_message": "java.lang.AssertionError: Le bouton est cliquable\n\tat org.junit.Assert.fail(Assert.java:88)\n\tat org.junit.Assert.assertTrue(Assert.java:41)\n\tat org.junit.Assert.assertFalse(Assert.java:64)\n\tat step_definition.CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé(CreateAccountNonConformPswSteps.java:23)\n\tat ✽.le compte client n est pas créé(file:src/test/resources/features/createAccountNonConformPsw.feature:11)\n",
+              "duration": 253582773,
               "status": "failed"
             },
             "line": 11,

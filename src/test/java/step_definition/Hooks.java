@@ -35,7 +35,6 @@ public class Hooks {
         if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
             WebDriverManager.chromedriver().setup();
             driver = new ChromeDriver();
-            System.out.println("from HOOKS");
         } else if (prop.getProperty("browser").equalsIgnoreCase("firefox")) {
             WebDriverManager.firefoxdriver().setup();
             driver = new FirefoxDriver();
@@ -44,7 +43,7 @@ public class Hooks {
             driver = new SafariDriver();
         } else if (prop.getProperty("browser").equalsIgnoreCase("ie")) {
             WebDriverManager.iedriver().setup();
-            WebDriver driver = new InternetExplorerDriver();
+            driver = new InternetExplorerDriver();
         } else if (prop.getProperty("browser").equalsIgnoreCase("edge")) {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
