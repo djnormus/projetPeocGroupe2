@@ -22,7 +22,7 @@ import java.security.NoSuchAlgorithmException;
 
 public class UploadToXray {
 
-    String token = "";
+    String token = "mon token";
 
     public void sendResultToXray() throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException, IOException, InterruptedException {
 
