@@ -6,7 +6,7 @@ import pages.LostPasswordPageLocators;
 
 import static step_definition.Hooks.driver;
 
-public class LostPasswordSteps {
+public class LostPassword_Steps {
 
     LoginRegisterPageLocators loginLoc = new LoginRegisterPageLocators(driver);
     LostPasswordPageLocators lostLoc = new LostPasswordPageLocators(driver);

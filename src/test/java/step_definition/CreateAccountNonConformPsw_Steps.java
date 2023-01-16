@@ -7,7 +7,7 @@ import pages.LoginRegisterPageLocators;
 
 import static step_definition.Hooks.driver;
 
-public class CreateAccountNonConformPswSteps {
+public class CreateAccountNonConformPsw_Steps {
 
     LoginRegisterPageLocators loginLoc = new LoginRegisterPageLocators(driver);
 

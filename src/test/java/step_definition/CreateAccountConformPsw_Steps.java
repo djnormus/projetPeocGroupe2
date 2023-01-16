@@ -15,7 +15,7 @@ import java.io.IOException;
 import static step_definition.Hooks.driver;
 import static step_definition.Hooks.prop;
 
-public class CreateAccountConformPswSteps {
+public class CreateAccountConformPsw_Steps {
 
     LoginRegisterPageLocators loginLoc = new LoginRegisterPageLocators(driver);
     HomePageLocators homeLoc = new HomePageLocators(driver);

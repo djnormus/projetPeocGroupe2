@@ -8,7 +8,7 @@ import pages.MyAccountPageLocators;
 
 import static step_definition.Hooks.driver;
 
-public class AuthenticationSteps {
+public class Authentication_Steps {
 
     LoginRegisterPageLocators loginLoc = new LoginRegisterPageLocators(driver);
     MyAccountPageLocators myAccountLoc = new MyAccountPageLocators(driver);
@@ -79,6 +79,6 @@ public class AuthenticationSteps {
     public void dansLaPageMyAccountLesLiensDashboardOrdersDownloadAdressesAccountDetailsEtLogoutSontPresents() {
 
         myAccountLoc.linkIsDisplayed();
-        
+
     }
 }
