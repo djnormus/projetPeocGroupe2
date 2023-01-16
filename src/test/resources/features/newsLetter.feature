@@ -31,7 +31,7 @@ Feature: US10 - Souscription à la newsletter
 		When je clique sur Shop
 		And je saisis un email au format invalide dans le champ Subscribe Here 'mail.com'
 		And je clique sur le bouton Subscribe
-		#Then un message d'erreur apparaît
+		Then un message d'erreur apparaît
 
 
 
