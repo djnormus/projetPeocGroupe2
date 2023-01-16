@@ -16,9 +16,19 @@ public class HomePageLocators {
     }
 
 
-    // MY ACCOUNT LINK
+    // NAVBAR LINKS
     @FindBy(xpath = "//a[normalize-space()='My Account']")
-    public WebElement myAccountButton;
+    public WebElement myAccountLink;
+
+    @FindBy(xpath = "//a[normalize-space()='Shop']")
+    public WebElement shopLink;
+
+    @FindBy(xpath = "")
+    public WebElement cartLink;
+
+
+
+
 
 
 

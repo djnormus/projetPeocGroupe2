@@ -34,7 +34,7 @@ public class LoginRegisterPageLocators {
     public WebElement loginErrorMsg;
 
     // LINK LOST YOUR PASSWORD
-    @FindBy(linkText ="Lost your password?" )
+    @FindBy(xpath ="//a[normalize-space()='Lost your password?']" )
     public WebElement linkLostPassword;
 
 

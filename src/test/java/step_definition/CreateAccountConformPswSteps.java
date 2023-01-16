@@ -31,7 +31,7 @@ public class CreateAccountConformPswSteps {
 
     @When("je clique sur My Account")
     public void jeCliqueSurMyAccount() {
-        homeLoc.myAccountButton.click();
+        homeLoc.myAccountLink.click();
     }
 
 

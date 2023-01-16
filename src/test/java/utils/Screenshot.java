@@ -25,7 +25,7 @@ public class Screenshot {
      File screenshotFile = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 
      // ******* TO SAVE SCREENSHOT *******
-     // Add dependency from "mvn repository" : commons io
+     // ******* Add dependency from "mvn repository" : commons io
 
      // Tips :  create date to use in file name of the picture
      Date currentDate = new Date();
@@ -33,8 +33,6 @@ public class Screenshot {
 
      // SAVE METHOD & PATH
      FileUtils.copyFile(screenshotFile, new File(".//screenshotFiles/" + screenshotFileName + ".png"));
-
-
 
  }
 
