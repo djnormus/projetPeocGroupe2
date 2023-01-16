@@ -16,6 +16,7 @@ import pages.NewsletterLocators;
 import java.time.Duration;
 
 import static step_definition.Hooks.driver;
+import static step_definition.Hooks.prop;
 
 public class Newsletter_Steps {
 
@@ -76,5 +77,18 @@ public class Newsletter_Steps {
         String errorMessage = "Please provide a valid email address";
 
         Assert.assertTrue("Le message d'erreur n'apparait pas", driver.getPageSource().contains(errorMessage) );
+    }
+
+    @And("je saisis un email au format valide dans le champ Subscribe Here {string}")
+    public void jeSaisisUnEmailAuFormatValideDansLeChampSubscribeHereEmail(String emailValid) {
+
+        newsletter.subscribeInput.sendKeys(emailValid);
+    }
+
+    @Then("un mail de confirmation est reçu dans la boite email de l'utilisateur")
+    public void unMailDeConfirmationEstReçuDansLaBoiteEmailDeLUtilisateur() {
+
+        driver.navigate().to(prop.getProperty("urlEmailBox"));
+
     }
 }
