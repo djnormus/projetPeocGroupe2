@@ -31,7 +31,7 @@ Feature: US10 - Souscription à la newsletter
 		When je clique sur Shop
 		And je saisis un email au format invalide dans le champ Subscribe Here 'mail.com'
 		And je clique sur le bouton Subscribe
-		#Then un message d'erreur apparaît
+		Then un message d'erreur apparaît
 
 
 
@@ -39,7 +39,7 @@ Feature: US10 - Souscription à la newsletter
 	Scenario: Test US10 - "Page Shop" - Vérifier qu'en cliquant sur le bouton Subscribe avec un email Format VALIDE, un mail de confirmation est reçu dans la boite mail de l’utilisateur 
 		Given j ouvre l application
 		When je clique sur Shop
-		And je saisis un email au format valide dans le champ Subscribe Here 'email'
+		And je saisis un email au format valide dans le champ Subscribe Here 'poecgroupe2@endtest-mail.io'
 		And je clique sur le bouton Subscribe
 		Then un mail de confirmation est reçu dans la boite email de l'utilisateur
 
