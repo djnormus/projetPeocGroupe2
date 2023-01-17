@@ -10,9 +10,12 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasketPageLocators;
+import pages.EmailBoxPageLocators;
 import pages.HomePageLocators;
 import pages.NewsletterLocators;
+import utils.Screenshot;
 
+import java.io.IOException;
 import java.time.Duration;
 
 import static step_definition.Hooks.driver;
@@ -23,6 +26,8 @@ public class Newsletter_Steps {
     BasketPageLocators basketLoc = new BasketPageLocators(driver);
     NewsletterLocators newsletter = new NewsletterLocators(driver);
     HomePageLocators homeLocator = new HomePageLocators(driver);
+    EmailBoxPageLocators mailLoc = new EmailBoxPageLocators(driver);
+    Screenshot screenshot = new Screenshot(driver);
 
 
     @When("je clique sur Panier")
@@ -86,9 +91,22 @@ public class Newsletter_Steps {
     }
 
     @Then("un mail de confirmation est reçu dans la boite email de l'utilisateur")
-    public void unMailDeConfirmationEstReçuDansLaBoiteEmailDeLUtilisateur() {
+    public void unMailDeConfirmationEstReçuDansLaBoiteEmailDeLUtilisateur() throws IOException {
 
         driver.navigate().to(prop.getProperty("urlEmailBox"));
+        driver.navigate().refresh();
+
+        // EXPLICIT WAIT
+        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
+        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//div[@class='email_subject']")));
+
+        String confirmationMailMessage = mailLoc.mailSubject.getText();
+
+        Assert.assertTrue("Le mail ne s'affiche pas", confirmationMailMessage.contains("Please Confirm Subscription"));
+
+        // SCREENSHOT
+        screenshot.takeScreenshot();
+
 
     }
 }
