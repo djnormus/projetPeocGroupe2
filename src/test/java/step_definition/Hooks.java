@@ -62,7 +62,7 @@ public class Hooks {
 
     @After
     public void AfterTest() {
-       // driver.quit();
+       driver.quit();
     }
 
 
