@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 3272347900,
+              "duration": 12140321624,
               "status": "passed"
             },
             "match": {
@@ -15,13 +15,13 @@
           }
         ],
         "line": 5,
-        "name": "Test US01- Valider que le client ne puisse pas créer un compte avec un nom, prénom, email et un mot de passe NON CONFORME au Regex (minim 7 caractères et contenir minim une majuscule, une  minuscule, un chiffre et un caractère spécial)",
+        "name": "Test US06 - Valider que dans l\u0027espace \"My Account\" un lien \"Logout\" permet la déconnexion et l\u0027affichage des pavés Login et Register",
         "description": "",
-        "id": "us01--création-de-compte;test-us01--valider-que-le-client-ne-puisse-pas-créer-un-compte-avec-un-nom--prénom--email-et-un-mot-de-passe-non-conforme-au-regex-(minim-7-caractères-et-contenir-minim-une-majuscule--une--minuscule--un-chiffre-et-un-caractère-spécial)",
+        "id": "us06---déconnexion;test-us06---valider-que-dans-l-espace-\"my-account\"-un-lien-\"logout\"-permet-la-déconnexion-et-l-affichage-des-pavés-login-et-register",
         "after": [
           {
             "result": {
-              "duration": 93400,
+              "duration": 117152,
               "status": "passed"
             },
             "match": {
@@ -34,99 +34,113 @@
         "steps": [
           {
             "result": {
-              "duration": 2763695800,
+              "duration": 4917934793,
               "status": "passed"
             },
             "line": 6,
             "name": "j ouvre l application",
             "match": {
-              "location": "CreateAccountConformPswSteps.jOuvreLApplication()"
+              "location": "CreateAccountConformPsw_Steps.jOuvreLApplication()"
             },
             "keyword": "Given "
           },
           {
             "result": {
-              "duration": 682259600,
+              "duration": 461611651,
               "status": "passed"
             },
             "line": 7,
             "name": "je clique sur My Account",
             "match": {
-              "location": "CreateAccountConformPswSteps.jeCliqueSurMyAccount()"
+              "location": "CreateAccountConformPsw_Steps.jeCliqueSurMyAccount()"
             },
             "keyword": "When "
           },
           {
             "result": {
-              "duration": 138673900,
+              "duration": 5914001496,
               "status": "passed"
             },
             "line": 8,
-            "name": "je saisie le email \u0027poecgroupe27@endtest.io\u0027",
+            "name": "je saisis mon email dans le pavé login \u0027poecgroupe26@endtest.io\u0027",
             "match": {
               "arguments": [
                 {
-                  "val": "\u0027poecgroupe27@endtest.io\u0027",
-                  "offset": 19
+                  "val": "\u0027poecgroupe26@endtest.io\u0027",
+                  "offset": 39
                 }
               ],
-              "location": "CreateAccountConformPswSteps.jeSaisieLeEmailStandard_user(String)"
+              "location": "Authentication_Steps.jeSaisisMonEmailDansLePaveLoginPoecgroupeEndtestIo(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 87751900,
+              "duration": 103119928,
               "status": "passed"
             },
             "line": 9,
-            "name": "je saisie un mot de passe Non Conforme au Regex \u0027poecgroupe\u0027",
+            "name": "je saisis un password valide dans le pavé login \u0027Poecgroupe2@\u0027",
             "match": {
               "arguments": [
                 {
-                  "val": "\u0027poecgroupe\u0027",
+                  "val": "\u0027Poecgroupe2@\u0027",
                   "offset": 48
                 }
               ],
-              "location": "CreateAccountNonConformPswSteps.jeSaisieUnMotDePasseNonConformeAuRegexPoecgroupe(String)"
+              "location": "Authentication_Steps.jeSaisisUnPasswordValideDansLePaveLoginPoecgroupe(String)"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 552692400,
+              "duration": 1739615682,
               "status": "passed"
             },
             "line": 10,
-            "name": "je clique sur Register",
+            "name": "je clique sur le bouton login",
             "match": {
-              "location": "CreateAccountConformPswSteps.jeCliqueSurRegister()"
+              "location": "Authentication_Steps.jeCliqueSurLeBoutonLogin()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "error_message": "java.lang.AssertionError: Le bouton est cliquable\r\n\tat org.junit.Assert.fail(Assert.java:88)\r\n\tat org.junit.Assert.assertTrue(Assert.java:41)\r\n\tat org.junit.Assert.assertFalse(Assert.java:64)\r\n\tat step_definition.CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé(CreateAccountNonConformPswSteps.java:23)\r\n\tat ✽.le compte client n est pas créé(file:src/test/resources/features/createAccountNonConformPsw.feature:11)\r\n",
-              "duration": 65435300,
-              "status": "failed"
+              "duration": 3634899869,
+              "status": "passed"
             },
             "line": 11,
-            "name": "le compte client n est pas créé",
+            "name": "je clique sur Logout",
             "match": {
-              "location": "CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé()"
+              "location": "Authentication_Steps.jeCliqueSurLogout()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 162624044,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "je suis déconnecté et la page Account affiche les pavé de Login et de Register",
+            "match": {
+              "location": "Logout_Steps.jeSuisDéconnectéEtLaPageAccountAfficheLesPavéDeLoginEtDeRegister()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@REQ_POE2-5"
+            "name": "@REQ_POE2-4"
           },
           {
-            "name": "@TEST_POE2-13"
+            "name": "@TEST_POE2-43"
           },
           {
-            "name": "@TESTSET_POE2-49"
+            "name": "@TESTSET_POE2-51"
+          },
+          {
+            "name": "@TESTSET_POE2-91"
           },
           {
             "name": "@endproject-Joumen"
@@ -134,14 +148,14 @@
         ]
       }
     ],
-    "name": "US01- Création de compte",
+    "name": "US06 - Déconnexion",
     "description": "",
-    "id": "us01--création-de-compte",
+    "id": "us06---déconnexion",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/createAccountNonConformPsw.feature",
+    "uri": "file:src/test/resources/features/logout.feature",
     "tags": [
       {
-        "name": "@REQ_POE2-5",
+        "name": "@REQ_POE2-4",
         "type": "Tag",
         "location": {
           "line": 1,

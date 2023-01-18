@@ -1,20 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="1" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="7.564481">
-    <testcase classname="US01- Création de compte" name="Test US01- Valider que le client ne puisse pas créer un compte avec un nom, prénom, email et un mot de passe NON CONFORME au Regex (minim 7 caractères et contenir minim une majuscule, une  minuscule, un chiffre et un caractère spécial)" time="7.564481">
-        <failure message="java.lang.AssertionError: Le bouton est cliquable&#13;&#10;&#9;at org.junit.Assert.fail(Assert.java:88)&#13;&#10;&#9;at org.junit.Assert.assertTrue(Assert.java:41)&#13;&#10;&#9;at org.junit.Assert.assertFalse(Assert.java:64)&#13;&#10;&#9;at step_definition.CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé(CreateAccountNonConformPswSteps.java:23)&#13;&#10;&#9;at ✽.le compte client n est pas créé(file:src/test/resources/features/createAccountNonConformPsw.feature:11)&#13;&#10;"><![CDATA[Given j ouvre l application.................................................passed
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="29.077234">
+    <testcase classname="US06 - Déconnexion" name="Test US06 - Valider que dans l'espace &quot;My Account&quot; un lien &quot;Logout&quot; permet la déconnexion et l'affichage des pavés Login et Register" time="29.077234">
+        <system-out><![CDATA[Given j ouvre l application.................................................passed
 When je clique sur My Account...............................................passed
-And je saisie le email 'poecgroupe27@endtest.io'............................passed
-And je saisie un mot de passe Non Conforme au Regex 'poecgroupe'............passed
-And je clique sur Register..................................................passed
-Then le compte client n est pas créé........................................failed
-
-StackTrace:
-java.lang.AssertionError: Le bouton est cliquable
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.assertTrue(Assert.java:41)
-	at org.junit.Assert.assertFalse(Assert.java:64)
-	at step_definition.CreateAccountNonConformPswSteps.leCompteClientNEstPasCréé(CreateAccountNonConformPswSteps.java:23)
-	at ✽.le compte client n est pas créé(file:src/test/resources/features/createAccountNonConformPsw.feature:11)
-]]></failure>
+And je saisis mon email dans le pavé login 'poecgroupe26@endtest.io'........passed
+And je saisis un password valide dans le pavé login 'Poecgroupe2@'..........passed
+And je clique sur le bouton login...........................................passed
+And je clique sur Logout....................................................passed
+Then je suis déconnecté et la page Account affiche les pavé de Login et de Register.passed
+]]></system-out>
     </testcase>
 </testsuite>

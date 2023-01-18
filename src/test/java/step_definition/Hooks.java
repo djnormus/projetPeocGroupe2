@@ -19,17 +19,13 @@ public class Hooks {
 
     public static WebDriver driver;
     public static Properties prop = new Properties();
-    public static FileReader fr;
-
     @Before
     public void BeforeTest() throws IOException {
-
 
        if (driver == null) {
             FileReader fr = new FileReader("src/test/resources/environement/config.properties");
             prop.load(fr);
         }
-
 
         // LOOP TO READ BROWSER TYPE & URL FROM "CONFIG.PROPERTIES"
         if (prop.getProperty("browser").equalsIgnoreCase("chrome")) {
@@ -48,21 +44,17 @@ public class Hooks {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         }
-
         // IMPLICITE WAIT
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
         // MAXIMIZE WINDOW
         driver.manage().window().maximize();
 
-
-
     }
-
 
     @After
     public void AfterTest() {
-       //driver.quit();
+       driver.quit();
     }
 
 
