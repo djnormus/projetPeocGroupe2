@@ -2,7 +2,9 @@ package modules;
 
 import cucumber.api.CucumberOptions;
 import cucumber.api.junit.Cucumber;
+import org.junit.AfterClass;
 import org.junit.runner.RunWith;
+
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
@@ -16,5 +18,15 @@ import org.junit.runner.RunWith;
 
 public class TestRunner  {
 
+/*
+
+    @AfterClass
+    public static void teardown() throws NoSuchAlgorithmException, KeyStoreException, IOException, InterruptedException, KeyManagementException {
+        UploadToXray xray = new UploadToXray()
+        xray.sendResultToXray();
+        System.out.println("import all test to xray");
+    }
+
+*/
 
 }

@@ -19,6 +19,10 @@ public class BasketPageLocators {
     @FindBy(id = "wpmenucartli")
     public WebElement basketLink;
 
+    // LIST ITEM
+    @FindBy(xpath = "//tr[@class='cart_item']")
+    public WebElement cartItem;
+
 
 
 

@@ -1,6 +1,7 @@
 package step_definition;
 
 import cucumber.api.java.en.And;
+import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
@@ -13,10 +14,13 @@ import pages.BasketPageLocators;
 import pages.EmailBoxPageLocators;
 import pages.HomePageLocators;
 import pages.NewsletterLocators;
+import utils.PropertiesFile;
 import utils.Screenshot;
 
+import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
+import java.util.Properties;
 
 import static step_definition.Hooks.driver;
 import static step_definition.Hooks.prop;
@@ -28,6 +32,7 @@ public class Newsletter_Steps {
     HomePageLocators homeLocator = new HomePageLocators(driver);
     EmailBoxPageLocators mailLoc = new EmailBoxPageLocators(driver);
     Screenshot screenshot = new Screenshot(driver);
+
 
 
     @When("je clique sur Panier")
@@ -91,7 +96,7 @@ public class Newsletter_Steps {
     }
 
     @Then("un mail de confirmation est reçu dans la boite email de l'utilisateur")
-    public void unMailDeConfirmationEstReçuDansLaBoiteEmailDeLUtilisateur() throws IOException {
+    public void unMailDeConfirmationEstRecuDansLaBoiteEmailDeLUtilisateur() throws IOException {
 
         driver.navigate().to(prop.getProperty("urlEmailBox"));
         driver.navigate().refresh();

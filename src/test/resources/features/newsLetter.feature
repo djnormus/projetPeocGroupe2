@@ -36,7 +36,7 @@ Feature: US10 - Souscription à la newsletter
 
 
 	@TEST_POE2-30 @TESTSET_POE2-55 @TESTSET_POE2-91 @endproject-Nordine
-	Scenario: Test US10 - "Page Shop" - Vérifier qu'en cliquant sur le bouton Subscribe avec un email Format VALIDE, un mail de confirmation est reçu dans la boite mail de l’utilisateur 
+	Scenario: Test US10 - "Page Shop" - Vérifier qu'en cliquant sur le bouton Subscribe avec un email Format VALIDE, un mail de confirmation est reçu dans la boite mail de l’utilisateur
 		Given j ouvre l application
 		When je clique sur Shop
 		And je saisis un email au format valide dans le champ Subscribe Here 'poecgroupe2@endtest-mail.io'

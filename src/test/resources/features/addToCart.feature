@@ -6,13 +6,13 @@ Feature: US07 - Ajout des articles dans le panier
 		Given j ouvre l application
 		When je clique sur Shop
 		Then chaque article contient une photo descriptive, un libellé et le prix affiché au-dessous
-		#And Un lien actif sur ces trois éléments redirige vers le détail de l article
+
+
 	@TEST_POE2-65 @TESTSET_POE2-89 @TESTSET_POE2-91 @TESTSET_POE2-95 @TestTNRmanuel
 	Scenario: Test US07 - Vérifier un article indisponible 
 		Given j ouvre l application
 		When je clique sur Shop
-		And  je sélectionne un article indisponible
-		Then Le lien READ MORE est affiché
+		Then Le lien READ MORE est affiché sur les articles indisponibles
 
 
 

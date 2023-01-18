@@ -17,8 +17,8 @@ public class ShopPageLocators {
     }
 
     // ONE ITEM "<li>"
-    @FindBy(css = ".post-182.product.type-product.status-publish.product_cat-html.product_tag-html.has-post-title.no-post-date.has-post-category.has-post-tag.has-post-comment.has-post-author.last.instock.taxable.shipping-taxable.purchasable.product-type-simple")
-    public WebElement oneArticle;
+    @FindBy(className = "product")
+    public WebElement oneItem;
 
     // ALL ITEMS
     @FindBy(css = "product")
@@ -40,6 +40,22 @@ public class ShopPageLocators {
     // ADD TO BASKET BTN
     @FindBy (xpath = "//li[@class='post-182 product type-product status-publish product_cat-html product_tag-html has-post-title no-post-date has-post-category has-post-tag has-post-comment has-post-author last instock taxable shipping-taxable purchasable product-type-simple']//a[@class='button product_type_simple add_to_cart_button ajax_add_to_cart'][normalize-space()='Add to basket']")
     public WebElement addToBasketBtn ;
+
+    // READ MORE BTN
+    @FindBy(xpath = "//li[2]//a[2]")
+    public WebElement readMoreBtn;
+
+    // VIEW BASKET LINK
+    @FindBy(xpath = "//a[normalize-space()='View Basket']")
+    public WebElement viewBasketLink;
+
+    // FILTER BY PRICE
+    @FindBy(className = "price_slider")
+    public WebElement filterByPrice;
+
+    // FILTER BY THEME
+    @FindBy(className = "orderby")
+    public WebElement filterByTheme;
 
 
 

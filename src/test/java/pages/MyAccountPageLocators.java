@@ -38,7 +38,7 @@ public class MyAccountPageLocators {
     public WebElement adressesLink;
 
     @FindBy(linkText = "Account Details")
-    public WebElement accountLink;
+    public WebElement accountDetailsLink;
 
     @FindBy(linkText = "Logout")
     public WebElement logoutLink;
@@ -54,7 +54,7 @@ public class MyAccountPageLocators {
 
     public void linkIsDisplayed() {
 
-        WebElement[] links = {dashboardLink, ordersLink, downloadsLink, adressesLink, accountLink, logoutLink};
+        WebElement[] links = {dashboardLink, ordersLink, downloadsLink, adressesLink, accountDetailsLink, logoutLink};
 
         for (WebElement link : links) {
             Assert.assertTrue(link.isDisplayed());
