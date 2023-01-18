@@ -20,7 +20,7 @@ public class AddToCart_Steps {
     BasketPageLocators basketLocator = new BasketPageLocators(driver);
 
     @Then("chaque article contient une photo descriptive, un libellé et le prix affiché au-dessous")
-    public void chaqueArticleContientUnePhotoDescriptiveUnLibelléEtLePrixAffichéAuDessous() {
+    public void chaqueArticleContientUnePhotoDescriptiveUnLibelleEtLePrixAfficheAuDessous() {
 
         for (WebElement article: shopLoc.allItems){
 
@@ -33,7 +33,7 @@ public class AddToCart_Steps {
     }
 
     @Then("Le lien READ MORE est affiché sur les articles indisponibles")
-    public void leLienREADMOREEstAffichéSurLesArticlesIndisponibles() {
+    public void leLienREADMOREEstAfficheSurLesArticlesIndisponibles() {
 
         Assert.assertTrue("Le bouton READ MORE n'est pas affiché", shopLoc.readMoreBtn.isDisplayed());
     }
@@ -62,20 +62,20 @@ public class AddToCart_Steps {
     }
 
     @Then("la page panier s affiche correctement avec l article ajouté")
-    public void laPagePanierSAfficheCorrectementAvecLArticleAjouté() {
+    public void laPagePanierSAfficheCorrectementAvecLArticleAjoute() {
 
         Assert.assertTrue("Aucun article n'est dans le panier", basketLocator.cartItem.isDisplayed());
 
     }
 
     @Then("Un filtre permet d'affiner la vue des articles par prix est présent")
-    public void unFiltrePermetDAffinerLaVueDesArticlesParPrixEstPrésent() {
+    public void unFiltrePermetDAffinerLaVueDesArticlesParPrixEstPresent() {
 
         Assert.assertTrue("Le filtre par prix n'est pas affiché", shopLoc.filterByPrice.isDisplayed());
     }
 
     @And("Un filtre permet d'affiner la vue des articles par theme est présent")
-    public void unFiltrePermetDAffinerLaVueDesArticlesParThemeEstPrésent() {
+    public void unFiltrePermetDAffinerLaVueDesArticlesParThemeEstPresent() {
 
         Assert.assertTrue("Le filtre par prix n'est pas affiché", shopLoc.filterByTheme.isDisplayed());
     }
@@ -83,11 +83,9 @@ public class AddToCart_Steps {
     @Then("La page Shop contient les articles en vente")
     public void laPageShopContientLesArticlesEnVente() {
 
-        //Assert.assertTrue("La photo n'est pas affichée", article.findElement(By.className("wp-post-image")).isDisplayed());
-        //Assert.assertTrue("Le titre n'est pas affiché",article.findElement(By.tagName("h3")).isDisplayed());
-        //Assert.assertTrue("Le prix n'est pas affichée",article.findElement(By.className("price")).isDisplayed());
-
         Assert.assertTrue("Le filtre par prix n'est pas affiché", shopLoc.oneItem.isDisplayed());
-
     }
+
+
+
 }

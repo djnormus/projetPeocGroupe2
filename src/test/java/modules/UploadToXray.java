@@ -19,10 +19,13 @@ import java.nio.file.Path;
 import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
+import java.util.Properties;
 
 public class UploadToXray {
 
-    String token = "mon token";
+    public static Properties prop = new Properties();
+
+    String token = prop.getProperty("token");
 
     public void sendResultToXray() throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException, IOException, InterruptedException {
 
