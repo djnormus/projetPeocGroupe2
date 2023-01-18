@@ -14,7 +14,7 @@ public class EmailBoxPageLocators {
         PageFactory.initElements(driver, this);
     }
 
-    //
+    // MAIL SUBJECT
     @FindBy(xpath = "//div[@class='email_subject']")
     public WebElement mailSubject;
 

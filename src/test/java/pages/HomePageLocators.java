@@ -23,8 +23,8 @@ public class HomePageLocators {
     @FindBy(xpath = "//a[normalize-space()='Shop']")
     public WebElement shopLink;
 
-    @FindBy(xpath = "")
-    public WebElement cartLink;
+    //@FindBy(xpath = "")
+    //public WebElement cartLink;
 
 
 
