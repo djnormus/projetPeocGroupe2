@@ -11,7 +11,8 @@ Feature: US05 - Visualisation des informations du compte depuis la page "My Acco
 		And je clique sur Account Details 
 		Then je suis redirigé vers les informations de compte
 
-
+###########  FIN DE TEST PASSWORD EST : Poecgroupe2@@  ########
+###########  REMETTRE LE PASSWORD A : Poecgroupe2@     ########
 
 	@TEST_POE2-33 @TESTSET_POE2-56 @TESTSET_POE2-91 @endproject-emna
 	Scenario: Test US05 - Vérifier que le changement du mot de passe est réussi
@@ -34,12 +35,12 @@ Feature: US05 - Visualisation des informations du compte depuis la page "My Acco
 		Given j ouvre l application
 		When je clique sur My Account
 		And je saisis mon email dans le pavé login 'poecgroupe26@endtest.io'
-		And je saisis un password valide dans le pavé login 'Poecgroupe2@'
+		And je saisis un password valide dans le pavé login 'Poecgroupe2@@'
 		And je clique sur le bouton login
 		And je clique sur Account Details
 		And je saisis le password actuel incorrect dans le champ Current Password 'Poecgroupe'
-		And je saisis le nouveau password dans le champ New Password 'Poecgroupe2@@'
-		And je confirme le password dans le champ Confirm New Password 'Poecgroupe2@@'
+		And je saisis le nouveau password dans le champ New Password 'Poecgroupe2@'
+		And je confirme le password dans le champ Confirm New Password 'Poecgroupe2@'
 		And je clique sur le bouton SAVE CHANGES
 		Then le password n est pas modifié et un message d erreur s affiche Your current password is incorrect
 
@@ -50,11 +51,11 @@ Feature: US05 - Visualisation des informations du compte depuis la page "My Acco
 		Given j ouvre l application
 		When je clique sur My Account
 		And je saisis mon email dans le pavé login 'poecgroupe26@endtest.io'
-		And je saisis un password valide dans le pavé login 'Poecgroupe2@'
+		And je saisis un password valide dans le pavé login 'Poecgroupe2@@'
 		And je clique sur le bouton login
 		And je clique sur Account Details
-		And je saisis le password actuel dans le champ Current Password 'Poecgroupe2@'
-		And je saisis le nouveau password dans le champ New Password 'Poecgroupe2@@'
+		And je saisis le password actuel dans le champ Current Password 'Poecgroupe2@@'
+		And je saisis le nouveau password dans le champ New Password 'Poecgroupe2@@@@@'
 		And je confirme le password dans le champ Confirm New Password 'Poecgroupe2@@@'
 		And je clique sur le bouton SAVE CHANGES
 		Then le password n est pas modifié et un message d erreur s affiche New passwords do not match

@@ -50,7 +50,7 @@ public class AccountDetails_Steps {
     @And("je saisis le password actuel incorrect dans le champ Current Password {string}")
     public void jeSaisisLePasswordActuelIncorrectDansLeChampCurrentPasswordPoecgroupe(String falsePassword) {
 
-        accountDetailsLoc.confirmPswdInput.sendKeys(falsePassword);
+        accountDetailsLoc.currentPswdInput.sendKeys(falsePassword);
     }
 
     @Then("le password est modifié avec un message de confirmation")
