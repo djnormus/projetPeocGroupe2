@@ -43,13 +43,12 @@ Feature: US10 - Souscription à la newsletter
 		And je clique sur le bouton Subscribe
 		Then un mail de confirmation est reçu dans la boite email de l'utilisateur
 
+		
 
-	# MANUEL TEST
-
-	#@TEST_POE2-31 @TESTSET_POE2-91 @endproject-Nordine
-	#Scenario: Test US10 - "Page Panier" - Vérifier qu'en cas d’erreur à la validation de l’adresse email (format INVALIDE) un message d'erreur "Please provide a valid email address" apparaît
-		#Given j ouvre l application
-		#When je clique sur Panier
-		#And je saisis un email au format invalide dans le champ Subscribe Here 'mail.com'
-		#And je clique sur le bouton Subscribe
-		#Then un message d'erreur apparaît
+	@TEST_POE2-31 @TESTSET_POE2-91 @endproject-Nordine
+	Scenario: Test US10 - "Page Panier" - Vérifier qu'en cas d’erreur à la validation de l’adresse email (format INVALIDE) un message d'erreur "Please provide a valid email address" apparaît
+		Given j ouvre l application
+		When je clique sur Panier
+		And je saisis un email au format invalide dans le champ Subscribe Here 'mail.com'
+		And je clique sur le bouton Subscribe
+		Then un message d'erreur apparaît

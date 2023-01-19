@@ -39,12 +39,16 @@ public class Newsletter_Steps {
     public void jeCliqueSurPanier() {
 
         basketLoc.basketLink.click();
+
     }
 
 
     @Then("un bouton Subscribe s affiche en bas de la page")
     public void unBoutonSubscribeSAfficheEnBasDeLaPage() {
 
+        String actualPage = driver.getCurrentUrl();
+
+        Assert.assertTrue("La page panier n'est pas affiché",actualPage.contains("basket") );
         Assert.assertTrue("Le bouton Subscribe ne s'affiche pas", newsletter.subscribeBtn.isDisplayed());
 
     }

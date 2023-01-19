@@ -26,10 +26,13 @@ public class TestRunner  {
 
 
     @AfterClass
-    public static void teardown() throws NoSuchAlgorithmException, KeyStoreException, IOException, InterruptedException, KeyManagementException {
+   public static void teardown() throws NoSuchAlgorithmException, KeyStoreException, IOException, InterruptedException, KeyManagementException {
+
+
         UploadToXray xray = new UploadToXray();
-        xray.sendResultToXray();
-        System.out.println("export test to xray");
+        xray.RemonteResultats();
+        System.out.println("Export to Xray OK");
+
     }
 
 

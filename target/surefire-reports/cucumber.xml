@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="29.077234">
-    <testcase classname="US06 - Déconnexion" name="Test US06 - Valider que dans l'espace &quot;My Account&quot; un lien &quot;Logout&quot; permet la déconnexion et l'affichage des pavés Login et Register" time="29.077234">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="24.964063">
+    <testcase classname="US06 - Déconnexion" name="Test US06 - Valider que dans l'espace &quot;My Account&quot; un lien &quot;Logout&quot; permet la déconnexion et l'affichage des pavés Login et Register" time="24.964063">
         <system-out><![CDATA[Given j ouvre l application.................................................passed
 When je clique sur My Account...............................................passed
 And je saisis mon email dans le pavé login 'poecgroupe26@endtest.io'........passed

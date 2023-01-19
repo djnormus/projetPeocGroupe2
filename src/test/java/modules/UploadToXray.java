@@ -21,13 +21,13 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.util.Properties;
 
-public class UploadToXray {
+import static step_definition.Hooks.prop;
 
-    public static Properties prop = new Properties();
+public class UploadToXray {
 
     String token = prop.getProperty("token");
 
-    public void sendResultToXray() throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException, IOException, InterruptedException {
+    public void RemonteResultats() throws NoSuchAlgorithmException, KeyStoreException, KeyManagementException, IOException, InterruptedException {
 
         SSLContext sslContext = SSLContexts.custom().loadTrustMaterial((chain, authType) -> true).build();
         SSLConnectionSocketFactory sslConnectionSocketFactory = new SSLConnectionSocketFactory(sslContext, new String[]
@@ -39,8 +39,8 @@ public class UploadToXray {
         request2.addHeader("Content-Type", "application/json");
         request2.addHeader("Authorization", "Bearer "+token);
         Thread.sleep(10000);
-        System.out.println("le path =" + System.getProperty("user.dir") + "\\target\\cucumber.json");
-        StringEntity params = new StringEntity(Files.readString(Path.of(System.getProperty("user.dir") + "\\target\\cucumber.json"), StandardCharsets.UTF_8));
+        System.out.println("le path =" + "target/cucumber.json");
+        StringEntity params = new StringEntity(Files.readString(Path.of("target/cucumber.json"), StandardCharsets.UTF_8));
         request2.setEntity(params);
 
         try (
@@ -54,5 +54,9 @@ public class UploadToXray {
             e.printStackTrace();
         }
     }
+
+
+
+
 
 }
