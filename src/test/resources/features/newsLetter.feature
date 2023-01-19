@@ -5,7 +5,7 @@ Feature: US10 - Souscription à la newsletter
 	Scenario: Test US10 - Vérifier que le bouton Subscribe existe dans la page Panier
 		Given j ouvre l application
 		When je clique sur Panier
-		Then un bouton Subscribe s affiche en bas de la page
+		Then un bouton Subscribe s affiche en bas de la page panier
 
 
 
@@ -13,7 +13,7 @@ Feature: US10 - Souscription à la newsletter
 	Scenario: Test US10 - Vérifier que le bouton Subscribe existe dans la page Shop
 		Given j ouvre l application
 		When je clique sur Shop
-		Then un bouton Subscribe s affiche en bas de la page
+		Then un bouton Subscribe s affiche en bas de la page shop
 
 
 
@@ -21,7 +21,7 @@ Feature: US10 - Souscription à la newsletter
 	Scenario: Test US10  - Vérifier que le bouton Subscribe existe dans la page My Account
 		Given j ouvre l application
 		When je clique sur My Account
-		Then un bouton Subscribe s affiche en bas de la page
+		Then un bouton Subscribe s affiche en bas de la page My Account
 
 
 

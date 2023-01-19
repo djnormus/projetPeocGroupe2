@@ -42,6 +42,7 @@ public class Newsletter_Steps {
 
     }
 
+    /*
 
     @Then("un bouton Subscribe s affiche en bas de la page")
     public void unBoutonSubscribeSAfficheEnBasDeLaPage() {
@@ -52,6 +53,7 @@ public class Newsletter_Steps {
         Assert.assertTrue("Le bouton Subscribe ne s'affiche pas", newsletter.subscribeBtn.isDisplayed());
 
     }
+    */
 
     @When("je clique sur Shop")
     public void jeCliqueSurShop() {
@@ -69,19 +71,7 @@ public class Newsletter_Steps {
     @And("je clique sur le bouton Subscribe")
     public void jeCliqueSurLeBoutonSubscribe() {
 
-
-
-
-        //driver.switchTo().frame("aswift_7");
-
-        // EXPLICIT WAIT
-        //WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(20));
-       // wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//input[@value='Subscribe']")));
-
-
         newsletter.subscribeBtn.click();
-
-
     }
 
 
@@ -116,6 +106,35 @@ public class Newsletter_Steps {
         // SCREENSHOT
         screenshot.takeScreenshot();
 
+
+    }
+
+    @Then("un bouton Subscribe s affiche en bas de la page panier")
+    public void unBoutonSubscribeSAfficheEnBasDeLaPagePanier() {
+
+        String actualPage = driver.getCurrentUrl();
+
+        Assert.assertTrue("La page panier n'est pas affiché",actualPage.contains("basket") );
+        Assert.assertTrue("Le bouton Subscribe ne s'affiche pas", newsletter.subscribeBtn.isDisplayed());
+
+    }
+
+    @Then("un bouton Subscribe s affiche en bas de la page shop")
+    public void unBoutonSubscribeSAfficheEnBasDeLaPageShop() {
+
+        String actualPage = driver.getCurrentUrl();
+
+        Assert.assertTrue("La page panier n'est pas affiché",actualPage.contains("shop") );
+        Assert.assertTrue("Le bouton Subscribe ne s'affiche pas", newsletter.subscribeBtn.isDisplayed());
+    }
+
+    @Then("un bouton Subscribe s affiche en bas de la page My Account")
+    public void unBoutonSubscribeSAfficheEnBasDeLaPageMyAccount() {
+
+        String actualPage = driver.getCurrentUrl();
+
+        Assert.assertTrue("La page panier n'est pas affiché",actualPage.contains("my-account") );
+        Assert.assertTrue("Le bouton Subscribe ne s'affiche pas", newsletter.subscribeBtn.isDisplayed());
 
     }
 }
