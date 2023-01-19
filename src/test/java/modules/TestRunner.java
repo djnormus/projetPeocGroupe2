@@ -14,7 +14,7 @@ import java.security.NoSuchAlgorithmException;
 @RunWith(Cucumber.class)
 @CucumberOptions(
 
-        tags = {"@TEST_POE2-43"},
+        tags = {"@REQ_POE2-11"},
         plugin = {"pretty", "html:target/cucumber", "json:target/cucumber.json","junit:target/surefire-reports/cucumber.xml"},
         glue = {"step_definition"},
         features={"src/test/resources/features"}
@@ -34,7 +34,6 @@ public class TestRunner  {
         System.out.println("Export to Xray OK");
 
     }
-
 
 
 }

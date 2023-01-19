@@ -6,7 +6,7 @@
         "before": [
           {
             "result": {
-              "duration": 3459392096,
+              "duration": 1505723000,
               "status": "passed"
             },
             "match": {
@@ -15,13 +15,13 @@
           }
         ],
         "line": 5,
-        "name": "Test US06 - Valider que dans l\u0027espace \"My Account\" un lien \"Logout\" permet la déconnexion et l\u0027affichage des pavés Login et Register",
+        "name": "Test US05 - Vérifier que dans la page \"My Account\" un lien \"Account Details\" redirige vers les informations de comptes (nom prénom, mail)",
         "description": "",
-        "id": "us06---déconnexion;test-us06---valider-que-dans-l-espace-\"my-account\"-un-lien-\"logout\"-permet-la-déconnexion-et-l-affichage-des-pavés-login-et-register",
+        "id": "us05---visualisation-des-informations-du-compte-depuis-la-page-\"my-account\";test-us05---vérifier-que-dans-la-page-\"my-account\"-un-lien-\"account-details\"-redirige-vers-les-informations-de-comptes-(nom-prénom--mail)",
         "after": [
           {
             "result": {
-              "duration": 376918148,
+              "duration": 233764400,
               "status": "passed"
             },
             "match": {
@@ -34,7 +34,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5501574415,
+              "duration": 2831185800,
               "status": "passed"
             },
             "line": 6,
@@ -46,7 +46,7 @@
           },
           {
             "result": {
-              "duration": 84962788,
+              "duration": 792472400,
               "status": "passed"
             },
             "line": 7,
@@ -58,7 +58,7 @@
           },
           {
             "result": {
-              "duration": 6689990742,
+              "duration": 58726500,
               "status": "passed"
             },
             "line": 8,
@@ -76,7 +76,7 @@
           },
           {
             "result": {
-              "duration": 174199373,
+              "duration": 162053000,
               "status": "passed"
             },
             "line": 9,
@@ -94,7 +94,7 @@
           },
           {
             "result": {
-              "duration": 5660397412,
+              "duration": 851706300,
               "status": "passed"
             },
             "line": 10,
@@ -106,56 +106,677 @@
           },
           {
             "result": {
-              "duration": 2913469046,
+              "duration": 573098500,
               "status": "passed"
             },
             "line": 11,
-            "name": "je clique sur Logout",
+            "name": "je clique sur Account Details",
             "match": {
-              "location": "Authentication_Steps.jeCliqueSurLogout()"
+              "location": "AccountDetails_Steps.jeCliqueSurAccountDetails()"
             },
             "keyword": "And "
           },
           {
             "result": {
-              "duration": 101127986,
+              "duration": 37324500,
               "status": "passed"
             },
             "line": 12,
-            "name": "je suis déconnecté et la page Account affiche les pavé de Login et de Register",
+            "name": "je suis redirigé vers les informations de compte",
             "match": {
-              "location": "Logout_Steps.jeSuisDéconnectéEtLaPageAccountAfficheLesPavéDeLoginEtDeRegister()"
+              "location": "AccountDetails_Steps.jeSuisRedirigeVersLesInformationsDeCompte()"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@REQ_POE2-4"
+            "name": "@REQ_POE2-11"
           },
           {
-            "name": "@TEST_POE2-43"
+            "name": "@TEST_POE2-32"
           },
           {
-            "name": "@TESTSET_POE2-51"
+            "name": "@TESTSET_POE2-56"
           },
           {
             "name": "@TESTSET_POE2-91"
           },
           {
-            "name": "@endproject-Joumen"
+            "name": "@endproject-emna"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 850999000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeTest()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "Test US05 - Vérifier que le changement du mot de passe est réussi",
+        "description": "",
+        "id": "us05---visualisation-des-informations-du-compte-depuis-la-page-\"my-account\";test-us05---vérifier-que-le-changement-du-mot-de-passe-est-réussi",
+        "after": [
+          {
+            "result": {
+              "duration": 212891900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 9856606800,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "j ouvre l application",
+            "match": {
+              "location": "CreateAccountConformPsw_Steps.jOuvreLApplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 780390200,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "je clique sur My Account",
+            "match": {
+              "location": "CreateAccountConformPsw_Steps.jeCliqueSurMyAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 51738900,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "je saisis mon email dans le pavé login \u0027poecgroupe26@endtest.io\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027poecgroupe26@endtest.io\u0027",
+                  "offset": 39
+                }
+              ],
+              "location": "Authentication_Steps.jeSaisisMonEmailDansLePaveLoginPoecgroupeEndtestIo(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 131907900,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "je saisis un password valide dans le pavé login \u0027Poecgroupe2@\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe2@\u0027",
+                  "offset": 48
+                }
+              ],
+              "location": "Authentication_Steps.jeSaisisUnPasswordValideDansLePaveLoginPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1010128300,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "je clique sur le bouton login",
+            "match": {
+              "location": "Authentication_Steps.jeCliqueSurLeBoutonLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 539239700,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "je clique sur Account Details",
+            "match": {
+              "location": "AccountDetails_Steps.jeCliqueSurAccountDetails()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 142955300,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "je saisis le password actuel dans le champ Current Password \u0027Poecgroupe2@\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe2@\u0027",
+                  "offset": 60
+                }
+              ],
+              "location": "AccountDetails_Steps.jeSaisisLePasswordActuelDansLeChampCurrentPasswordPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 74053400,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "je saisis le nouveau password dans le champ New Password \u0027Poecgroupe2@@\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe2@@\u0027",
+                  "offset": 57
+                }
+              ],
+              "location": "AccountDetails_Steps.jeSaisisLeNouveauPasswordDansLeChampNewPasswordPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 48494900,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "je confirme le password dans le champ Confirm New Password \u0027Poecgroupe2@@\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe2@@\u0027",
+                  "offset": 59
+                }
+              ],
+              "location": "AccountDetails_Steps.jeConfirmeLePasswordDansLeChampConfirmNewPasswordPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1237099200,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "je clique sur le bouton SAVE CHANGES",
+            "match": {
+              "location": "AccountDetails_Steps.jeCliqueSurLeBoutonSAVECHANGES()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 26754400,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "le password est modifié avec un message de confirmation",
+            "match": {
+              "location": "AccountDetails_Steps.lePasswordEstModifieAvecUnMessageDeConfirmation()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@REQ_POE2-11"
+          },
+          {
+            "name": "@TEST_POE2-33"
+          },
+          {
+            "name": "@TESTSET_POE2-56"
+          },
+          {
+            "name": "@TESTSET_POE2-91"
+          },
+          {
+            "name": "@endproject-emna"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 831681200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeTest()"
+            }
+          }
+        ],
+        "line": 34,
+        "name": "Test US05 - Vérifier que le changement du mot de passe est KO en saisissant le password actuel INCORRECT",
+        "description": "",
+        "id": "us05---visualisation-des-informations-du-compte-depuis-la-page-\"my-account\";test-us05---vérifier-que-le-changement-du-mot-de-passe-est-ko-en-saisissant-le-password-actuel-incorrect",
+        "after": [
+          {
+            "result": {
+              "duration": 229959300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2411099700,
+              "status": "passed"
+            },
+            "line": 35,
+            "name": "j ouvre l application",
+            "match": {
+              "location": "CreateAccountConformPsw_Steps.jOuvreLApplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 770236500,
+              "status": "passed"
+            },
+            "line": 36,
+            "name": "je clique sur My Account",
+            "match": {
+              "location": "CreateAccountConformPsw_Steps.jeCliqueSurMyAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 43191300,
+              "status": "passed"
+            },
+            "line": 37,
+            "name": "je saisis mon email dans le pavé login \u0027poecgroupe26@endtest.io\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027poecgroupe26@endtest.io\u0027",
+                  "offset": 39
+                }
+              ],
+              "location": "Authentication_Steps.jeSaisisMonEmailDansLePaveLoginPoecgroupeEndtestIo(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 156629300,
+              "status": "passed"
+            },
+            "line": 38,
+            "name": "je saisis un password valide dans le pavé login \u0027Poecgroupe2@@\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe2@@\u0027",
+                  "offset": 48
+                }
+              ],
+              "location": "Authentication_Steps.jeSaisisUnPasswordValideDansLePaveLoginPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 775973700,
+              "status": "passed"
+            },
+            "line": 39,
+            "name": "je clique sur le bouton login",
+            "match": {
+              "location": "Authentication_Steps.jeCliqueSurLeBoutonLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 553404900,
+              "status": "passed"
+            },
+            "line": 40,
+            "name": "je clique sur Account Details",
+            "match": {
+              "location": "AccountDetails_Steps.jeCliqueSurAccountDetails()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 127454500,
+              "status": "passed"
+            },
+            "line": 41,
+            "name": "je saisis le password actuel incorrect dans le champ Current Password \u0027Poecgroupe\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe\u0027",
+                  "offset": 70
+                }
+              ],
+              "location": "AccountDetails_Steps.jeSaisisLePasswordActuelIncorrectDansLeChampCurrentPasswordPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 62087400,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "je saisis le nouveau password dans le champ New Password \u0027Poecgroupe2@\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe2@\u0027",
+                  "offset": 57
+                }
+              ],
+              "location": "AccountDetails_Steps.jeSaisisLeNouveauPasswordDansLeChampNewPasswordPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 40994200,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "je confirme le password dans le champ Confirm New Password \u0027Poecgroupe2@\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe2@\u0027",
+                  "offset": 59
+                }
+              ],
+              "location": "AccountDetails_Steps.jeConfirmeLePasswordDansLeChampConfirmNewPasswordPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 558650400,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "je clique sur le bouton SAVE CHANGES",
+            "match": {
+              "location": "AccountDetails_Steps.jeCliqueSurLeBoutonSAVECHANGES()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 30422100,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "le password n est pas modifié et un message d erreur s affiche Your current password is incorrect",
+            "match": {
+              "location": "AccountDetails_Steps.lePasswordNEstPasModifieEtUnMessageDErreurSAfficheYourCurrentPasswordIsIncorrect()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@REQ_POE2-11"
+          },
+          {
+            "name": "@TEST_POE2-105"
+          },
+          {
+            "name": "@TESTSET_POE2-56"
+          }
+        ]
+      },
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 787132300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.BeforeTest()"
+            }
+          }
+        ],
+        "line": 50,
+        "name": "Test US05 - Vérifier que le changement du mot de passe est KO quand les nouveaux passwords ne correspondent pas (confirmation password)",
+        "description": "",
+        "id": "us05---visualisation-des-informations-du-compte-depuis-la-page-\"my-account\";test-us05---vérifier-que-le-changement-du-mot-de-passe-est-ko-quand-les-nouveaux-passwords-ne-correspondent-pas-(confirmation-password)",
+        "after": [
+          {
+            "result": {
+              "duration": 189436700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.AfterTest()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2563640700,
+              "status": "passed"
+            },
+            "line": 51,
+            "name": "j ouvre l application",
+            "match": {
+              "location": "CreateAccountConformPsw_Steps.jOuvreLApplication()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 742707100,
+              "status": "passed"
+            },
+            "line": 52,
+            "name": "je clique sur My Account",
+            "match": {
+              "location": "CreateAccountConformPsw_Steps.jeCliqueSurMyAccount()"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 49631000,
+              "status": "passed"
+            },
+            "line": 53,
+            "name": "je saisis mon email dans le pavé login \u0027poecgroupe26@endtest.io\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027poecgroupe26@endtest.io\u0027",
+                  "offset": 39
+                }
+              ],
+              "location": "Authentication_Steps.jeSaisisMonEmailDansLePaveLoginPoecgroupeEndtestIo(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 157308600,
+              "status": "passed"
+            },
+            "line": 54,
+            "name": "je saisis un password valide dans le pavé login \u0027Poecgroupe2@@\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe2@@\u0027",
+                  "offset": 48
+                }
+              ],
+              "location": "Authentication_Steps.jeSaisisUnPasswordValideDansLePaveLoginPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 829918900,
+              "status": "passed"
+            },
+            "line": 55,
+            "name": "je clique sur le bouton login",
+            "match": {
+              "location": "Authentication_Steps.jeCliqueSurLeBoutonLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 604819900,
+              "status": "passed"
+            },
+            "line": 56,
+            "name": "je clique sur Account Details",
+            "match": {
+              "location": "AccountDetails_Steps.jeCliqueSurAccountDetails()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 54163300,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "je saisis le password actuel dans le champ Current Password \u0027Poecgroupe2@@\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe2@@\u0027",
+                  "offset": 60
+                }
+              ],
+              "location": "AccountDetails_Steps.jeSaisisLePasswordActuelDansLeChampCurrentPasswordPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 158083000,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "je saisis le nouveau password dans le champ New Password \u0027Poecgroupe2@@@@@\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe2@@@@@\u0027",
+                  "offset": 57
+                }
+              ],
+              "location": "AccountDetails_Steps.jeSaisisLeNouveauPasswordDansLeChampNewPasswordPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 43210100,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "je confirme le password dans le champ Confirm New Password \u0027Poecgroupe2@@@\u0027",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\u0027Poecgroupe2@@@\u0027",
+                  "offset": 59
+                }
+              ],
+              "location": "AccountDetails_Steps.jeConfirmeLePasswordDansLeChampConfirmNewPasswordPoecgroupe(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 706734000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "je clique sur le bouton SAVE CHANGES",
+            "match": {
+              "location": "AccountDetails_Steps.jeCliqueSurLeBoutonSAVECHANGES()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 28496600,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "le password n est pas modifié et un message d erreur s affiche New passwords do not match",
+            "match": {
+              "location": "AccountDetails_Steps.lePasswordNEstPasModifieEtUnMessageDErreurSAfficheNewPasswordsDoNotMatch()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@REQ_POE2-11"
+          },
+          {
+            "name": "@TEST_POE2-106"
+          },
+          {
+            "name": "@TESTSET_POE2-56"
           }
         ]
       }
     ],
-    "name": "US06 - Déconnexion",
+    "name": "US05 - Visualisation des informations du compte depuis la page \"My Account\"",
     "description": "",
-    "id": "us06---déconnexion",
+    "id": "us05---visualisation-des-informations-du-compte-depuis-la-page-\"my-account\"",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/logout.feature",
+    "uri": "file:src/test/resources/features/myAccountDetails.feature",
     "tags": [
       {
-        "name": "@REQ_POE2-4",
+        "name": "@REQ_POE2-11",
         "type": "Tag",
         "location": {
           "line": 1,

@@ -1,13 +1,55 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="1" time="24.964063">
-    <testcase classname="US06 - Déconnexion" name="Test US06 - Valider que dans l'espace &quot;My Account&quot; un lien &quot;Logout&quot; permet la déconnexion et l'affichage des pavés Login et Register" time="24.964063">
+<testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="4" time="35.519993">
+    <testcase classname="US05 - Visualisation des informations du compte depuis la page &quot;My Account&quot;" name="Test US05 - Vérifier que dans la page &quot;My Account&quot; un lien &quot;Account Details&quot; redirige vers les informations de comptes (nom prénom, mail)" time="7.048283">
         <system-out><![CDATA[Given j ouvre l application.................................................passed
 When je clique sur My Account...............................................passed
 And je saisis mon email dans le pavé login 'poecgroupe26@endtest.io'........passed
 And je saisis un password valide dans le pavé login 'Poecgroupe2@'..........passed
 And je clique sur le bouton login...........................................passed
-And je clique sur Logout....................................................passed
-Then je suis déconnecté et la page Account affiche les pavé de Login et de Register.passed
+And je clique sur Account Details...........................................passed
+Then je suis redirigé vers les informations de compte.......................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="US05 - Visualisation des informations du compte depuis la page &quot;My Account&quot;" name="Test US05 - Vérifier que le changement du mot de passe est réussi" time="14.963624">
+        <system-out><![CDATA[Given j ouvre l application.................................................passed
+When je clique sur My Account...............................................passed
+And je saisis mon email dans le pavé login 'poecgroupe26@endtest.io'........passed
+And je saisis un password valide dans le pavé login 'Poecgroupe2@'..........passed
+And je clique sur le bouton login...........................................passed
+And je clique sur Account Details...........................................passed
+And je saisis le password actuel dans le champ Current Password 'Poecgroupe2@'.passed
+And je saisis le nouveau password dans le champ New Password 'Poecgroupe2@@'.passed
+And je confirme le password dans le champ Confirm New Password 'Poecgroupe2@@'.passed
+And je clique sur le bouton SAVE CHANGES....................................passed
+Then le password est modifié avec un message de confirmation................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="US05 - Visualisation des informations du compte depuis la page &quot;My Account&quot;" name="Test US05 - Vérifier que le changement du mot de passe est KO en saisissant le password actuel INCORRECT" time="6.592401">
+        <system-out><![CDATA[Given j ouvre l application.................................................passed
+When je clique sur My Account...............................................passed
+And je saisis mon email dans le pavé login 'poecgroupe26@endtest.io'........passed
+And je saisis un password valide dans le pavé login 'Poecgroupe2@@'.........passed
+And je clique sur le bouton login...........................................passed
+And je clique sur Account Details...........................................passed
+And je saisis le password actuel incorrect dans le champ Current Password 'Poecgroupe'.passed
+And je saisis le nouveau password dans le champ New Password 'Poecgroupe2@'.passed
+And je confirme le password dans le champ Confirm New Password 'Poecgroupe2@'.passed
+And je clique sur le bouton SAVE CHANGES....................................passed
+Then le password n est pas modifié et un message d erreur s affiche Your current password is incorrect.passed
+]]></system-out>
+    </testcase>
+    <testcase classname="US05 - Visualisation des informations du compte depuis la page &quot;My Account&quot;" name="Test US05 - Vérifier que le changement du mot de passe est KO quand les nouveaux passwords ne correspondent pas (confirmation password)" time="6.915685">
+        <system-out><![CDATA[Given j ouvre l application.................................................passed
+When je clique sur My Account...............................................passed
+And je saisis mon email dans le pavé login 'poecgroupe26@endtest.io'........passed
+And je saisis un password valide dans le pavé login 'Poecgroupe2@@'.........passed
+And je clique sur le bouton login...........................................passed
+And je clique sur Account Details...........................................passed
+And je saisis le password actuel dans le champ Current Password 'Poecgroupe2@@'.passed
+And je saisis le nouveau password dans le champ New Password 'Poecgroupe2@@@@@'.passed
+And je confirme le password dans le champ Confirm New Password 'Poecgroupe2@@@'.passed
+And je clique sur le bouton SAVE CHANGES....................................passed
+Then le password n est pas modifié et un message d erreur s affiche New passwords do not match.passed
 ]]></system-out>
     </testcase>
 </testsuite>
