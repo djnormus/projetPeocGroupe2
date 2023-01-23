@@ -16,13 +16,17 @@ public class MyAccountPageLocators {
 
         this.driver = driver;
         PageFactory.initElements(driver, this);
-
     }
 
 
     // WELCOME MESSAGE
     @FindBy(xpath = "//p[contains(text(),'Hello')]")
     public WebElement welcomeMessage;
+
+    // LOGO
+    @FindBy(xpath = "//a[@title='Automation Practice Site']")
+    public WebElement websiteLogo;
+
 
     // LINKS
     @FindBy(linkText = "Dashboard")
@@ -45,9 +49,7 @@ public class MyAccountPageLocators {
 
     // LINKS LIST
     @FindBy(xpath = "//nav[@class='woocommerce-MyAccount-navigation']")
-    public List<WebElement> navbarLinks;
-
-
+    public List<WebElement> menuLinks;
 
 
     // VERIFY & PRINT ALL LINKS
@@ -64,5 +66,32 @@ public class MyAccountPageLocators {
     }
 
 
+    public void allPageContainLogoAndLinkToHome() {
 
+        // LIST WEB ELEMENTS WITHOUT LOGOUT
+        WebElement[] links = {dashboardLink, ordersLink, downloadsLink, adressesLink, accountDetailsLink};
+
+        for (WebElement link : links) {
+
+            link.click();
+
+            // TO GET HREF FROM LOGO
+            String logoHrefLink = websiteLogo.getAttribute("href");
+
+            Assert.assertTrue("Le logo n'est pas affiché dans la page : " + driver.getCurrentUrl(), websiteLogo.isDisplayed());
+
+            // VERIFY EACH PAGE LOGO CONTAIN LINK TO HOME PAGE
+            Assert.assertEquals("L'image ne contient pas le lien vers l'accueil dans : " + driver.getCurrentUrl(),
+                    "https://practice.automationtesting.in/", logoHrefLink);
+
+            // BACK
+            //driver.navigate().back();
+
+        }
+
+
+    }
+
+
+// END
 }

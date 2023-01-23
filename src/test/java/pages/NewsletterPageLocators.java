@@ -5,11 +5,11 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class NewsletterLocators {
+public class NewsletterPageLocators {
 
     WebDriver driver;
 
-    public NewsletterLocators(WebDriver driver){
+    public NewsletterPageLocators(WebDriver driver){
         this.driver = driver;
         PageFactory.initElements(driver, this);
     }

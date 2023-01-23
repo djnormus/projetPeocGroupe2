@@ -44,6 +44,7 @@ public class Hooks {
             WebDriverManager.edgedriver().setup();
             driver = new EdgeDriver();
         }
+
         // IMPLICITE WAIT
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(20));
 
@@ -54,7 +55,8 @@ public class Hooks {
 
     @After
     public void AfterTest() {
-       driver.quit();
+
+        driver.quit();
     }
 
 

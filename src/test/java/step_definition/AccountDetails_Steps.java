@@ -84,4 +84,11 @@ public class AccountDetails_Steps {
 
         accountDetailsLoc.saveChangesBtn.click();
     }
+
+    @Then("Le logo est présent sur toutes les pages et contient un lien qui redirige vers l'accueil")
+    public void leLogoEstPresentSurToutesLesPagesEtContientUnLienQuiRedirigeVersLAccueil() {
+
+        myAccountLoc.allPageContainLogoAndLinkToHome();
+
+    }
 }

@@ -1,26 +1,20 @@
 package step_definition;
 
 import cucumber.api.java.en.And;
-import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 import cucumber.api.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import pages.BasketPageLocators;
 import pages.EmailBoxPageLocators;
 import pages.HomePageLocators;
-import pages.NewsletterLocators;
-import utils.PropertiesFile;
+import pages.NewsletterPageLocators;
 import utils.Screenshot;
 
-import java.io.FileReader;
 import java.io.IOException;
 import java.time.Duration;
-import java.util.Properties;
 
 import static step_definition.Hooks.driver;
 import static step_definition.Hooks.prop;
@@ -28,7 +22,7 @@ import static step_definition.Hooks.prop;
 public class Newsletter_Steps {
 
     BasketPageLocators basketLoc = new BasketPageLocators(driver);
-    NewsletterLocators newsletter = new NewsletterLocators(driver);
+    NewsletterPageLocators newsletter = new NewsletterPageLocators(driver);
     HomePageLocators homeLocator = new HomePageLocators(driver);
     EmailBoxPageLocators mailLoc = new EmailBoxPageLocators(driver);
     Screenshot screenshot = new Screenshot(driver);
